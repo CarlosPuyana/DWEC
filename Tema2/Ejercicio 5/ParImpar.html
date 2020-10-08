@@ -1,0 +1,34 @@
+<!-- U2T5 - Ejercicios varios Ejercicio 1 --> 
+
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Numero par o impar</title>
+	<script type="text/javascript">
+
+		function verParImpar() {
+			
+			var valor=document.getElementById("txtdato").value // Declaramos la variable y le damos el valor que se introduce en el formulario
+
+			if(valor%2==0) { // si el resto entre 2 es 0 es par
+				console.log("Es par")
+			} else { // Si es 1 es impar
+				console.log("Es impar")
+			}
+
+		}
+	</script>
+</head>
+
+<body>
+	<span> Ver resultado</span>
+	<br />
+	<input type="text" id='txtdato' />
+	<br />
+	<input type="button" onclick="verParImpar();" value='Pulsar'>
+</body>
+
+</html>

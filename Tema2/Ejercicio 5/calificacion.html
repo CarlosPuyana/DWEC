@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+		<title>Actividad multiplos de 3</title>
+		<script type="text/javascript">  
+		
+		function verCalificacion(nota){
+			 nota = parseInt(nota);
+			switch(nota){
+				case 0:				
+					console.log('Suspenso');
+					break;
+				case 1:				
+					console.log('Suspenso');
+					break
+				case 2:				
+					console.log('Suspenso');
+					break;
+				case 3:				
+					console.log('Suspenso');
+					break;
+				case 4:				
+					console.log('Suspenso'); // Si es menor que 5 da suspenso
+				case 5: // Si da 5, da todo menos suspenso, ya que falta el break
+				case 6:
+					console.log('Aprobado'); // si da 6, da de aqui para delante
+				case 7: // si da 7, da de notable para delante
+				case 8:
+					console.log('Notable'); // si da 8, da de notable para delante
+				case nota>8:
+					console.log('Sobresaliente'); // si da >8, da de sobresaliente para delante
+				default:
+					console.log('Valor erroneo'); // Por defecto da valor erroneo
+			} 
+		}
+		</script> 
+	</head>
+	<body>
+		<span> Ver resultado</span>
+		<br/>
+		<input type= "text" id= 'txtnota' value="5"/>
+		<br/>
+		<input type="button" onclick = "verCalificacion(document.getElementById('txtnota').value);" value = 'Pulsar'>
+	</body> 
+</html>
