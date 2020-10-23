@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo del entregable</title>
+
+    <script>
+        var num = prompt("Introduce un numero");
+        var intentos = 0;
+        var aleatorio = parseInt(Math.random() * (101 - 1) + 1);
+
+        while(num != aleatorio) {
+            intentos++;
+
+            if(num == "") {
+                num = confirm("Has salido del juego. \n Quieres volver a intentarlo??");
+                if(num == true) {
+                    location.reload();
+                }else {
+                    alert("Hasta luego");
+                }
+            }
+           
+            if(num > aleatorio) {
+            num =  parseInt(prompt("El numero introducido es mayor que el numero aleatorio. Introduce otro numero."));
+           }else if(num < aleatorio) {
+            num =  parseInt(prompt("El numero introducido es menor que el numero aleatorio. Introduce otro numero."));  
+           }
+        }
+
+        if(num == aleatorio) {
+            num = confirm("Ha acertado con un total de " + intentos + " veces \n Quiere volver a jugar?");
+            if(num == true) {
+                location.reload();
+            }else {
+                alert("Hasta luego");
+            }
+        }
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
