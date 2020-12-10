@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Formulario y Eventos</title>
+    <script src="examen.js"> </script>
+</head>
+<body>
+    
+    <h1>Carlos Puyana Paraiso - 2 DAW - Formulario y Eventos</h1>
+
+    <form action="">
+        <label for=""> Nombre Producto </label> <br><input type="text" id="producto"> <br>
+        <label for=""> Modelo </label> <br> 
+        <select name="modelo" id="modelo">
+            <option value="0"> Selecciona una opcion</option>
+            <option value="Televisor">Televisor</option>
+            <option value="Lavadora">Lavadora</option>
+            <option value="Microondas ">Microondas </option>
+            <option value="Lavavajillas">Lavavajillas</option>
+        </select> <br>
+        <label for=""> Fecha Fabricación </label> <br> <input type="text" id="fecha"> <br>
+        <label for=""> Consumo Energético </label> <br> <input type="text" id="consumo"> <br>
+        <label for=""> Contraseña </label> <br> <input type="password" name="" id="contra"> <br>
+
+        <input type="submit" value="Enviar" onclick="return validar()">
+        <input type="reset" value="Limpiar">
+        
+
+    </form>
+
+
+    <div id="validado">
+
+    </div>
+
+</body>
+</html>
