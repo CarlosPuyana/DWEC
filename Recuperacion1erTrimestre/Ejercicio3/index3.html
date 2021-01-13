@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ej3.js"></script>
+</head>
+<body>
+    <h1>Carlos Puyana Paraiso - 2 DAW</h1>
+
+    <form id="formulario">
+        Nombre Paciente <input type="text" name="Nombre" id="Nombre"> <br> <br>
+        <label for="">DNI </label> <input type="text" name="dni" id="dni"> <br> <br>
+        Vacuna <select name="vacuna" id="vacuna">
+            <option value="0">Seleccionable para elegir el fabricante de la vacuna</option>
+            <option value="Oxford">Oxford-Astrazeneca</option>
+            <option value="Moderna">Moderna</option>
+            <option value="Pfizer">Pfizer-Biontech</option>
+        </select> <br> <br>
+        <label for="">Password </label><input type="text" name="contra" id="contra">
+        <br> <br>
+        <button onclick="ResetearForm" value="Resetear">Resetear</button>
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <div id="errores">
+
+    </div>
+
+</body>
+</html>
