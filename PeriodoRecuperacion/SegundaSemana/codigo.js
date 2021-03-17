@@ -7,18 +7,20 @@ let num = Math.round(Math.random()*100)
 alert(num)
 
 var numus = parseInt(prompt("Dime un numero")) // Preguntamos el numero
-var intentos=1
+
 
 
 console.log("prueba")
-while (isNaN(numus)) { // Mientras que el numero no sea un numero se le volvera a preguntar
-    numus = parseInt(prompt("Error. \n Introduce un numero"))
-    intentos++ // Sumamos un intento
+
+// Por si cancela el juego de primeras
+if (isNaN(numus)) {
+    alert("Se ha cancelado el juego")
 }
 
+var intentos=1
 
 
-while (numus!= num || numus != null) { // Mientras que el numero introducido no es igual al numero a adivinar entramos en bucle
+while (numus!= num && !(isNaN(numus))) { // Mientras que el numero introducido no es igual al numero a adivinar entramos en bucle
     console.log(numus)
 
     if (numus > num) { // Si el numero es mayor que al adivinar, se le notifica y suma 1 intento
@@ -31,14 +33,15 @@ while (numus!= num || numus != null) { // Mientras que el numero introducido no 
         intentos++
     }
 
+    if (isNaN(numus)) {
+        alert("Se ha cancelado el juego") // Le da al boton cancelar
+    }
     
 }
 
-if (numus === null) {
-    alert("Se ha cancelado el juego")
-}
 
-    if(numus == num) { // Si el numero es igual al que adivinar, se le notifica que acerto y los intentos hechos.
+
+    if(numus === num) { // Si el numero es igual al que adivinar, se le notifica que acerto y los intentos hechos.
         alert("Has acertado el numero en " + intentos + " intentos.")
     }
 
