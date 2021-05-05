@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>El primer script</title>
+        <script src="codigo.js"></script>       <!-- Linkeamos el archivo de JavaScript -->
+    </head>
+    
+    <body>
+        
+        <h1>⚠️Aviso: Si tu navegador no es compatible con JavaScript no podras disfrutar de las caracteristicas de esta página web ⚠️</h1>
+        
+        <p>Esta página contiene el primer script</p>
+
+        <div>
+            <img src="distribuccion.jpg" id="foto" alt="" style="width: 200px;">
+        </div>
+
+        <br> <br> <br>
+
+        <form>
+            <label for="tipo">Tipo de Incidencia</label>
+            <select name="select" onchange="cambiar(this)">
+                <option value="distribuccion.jpg" selected>Distribucion</option>
+                <option value="oficina.jpg">Oficina</option>
+                <option value="produccion.jpg">Produccion</option>
+            </select>
+            
+            <br>
+
+            <label for="serie">Numero de serie</label>
+            <input type="text" id="serie"> <br> <br>
+            <input type="button" value="Mostrar descripcion" id="desaparecer" onclick="drop()">
+            <textarea name="text" id="descripcion" style="resize:vertical; visibility:hidden; width: 0px; height: 0px;" cols="50" rows="3"></textarea><br>
+            <input type="button" value="Enviar datos" id="datos" onclick="validarSerie()">
+
+        </form>
+
+
+    </body>
+
+</html>
